@@ -1,0 +1,27 @@
+name: False positive
+description: VibeOK reported a problem, but that part of the app works
+labels: ["false positive"]
+body:
+  - type: textarea
+    id: finding
+    attributes:
+      label: What VibeOK reported
+      description: Paste the finding from the terminal or VIBEOK_FIX_PROMPT.md
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: What actually happens when you click it yourself
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Minimal HTML or component that reproduces it (if you can)
+      render: html
+  - type: input
+    id: stack
+    attributes:
+      label: Framework / UI library
+      placeholder: Next.js 16 + shadcn/ui, Vite + React + MUI, Lovable app...

@@ -1,0 +1,20 @@
+name: Missed bug
+description: Your app has a bug VibeOK should have caught
+labels: ["missed bug"]
+body:
+  - type: textarea
+    id: bug
+    attributes:
+      label: The bug
+      description: What breaks, and how a user hits it
+    validations:
+      required: true
+  - type: textarea
+    id: output
+    attributes:
+      label: VibeOK output
+      render: text
+  - type: input
+    id: stack
+    attributes:
+      label: Framework / UI library

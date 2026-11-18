@@ -1,0 +1,7 @@
+node_modules/
+dist/
+VIBEOK_FIX_PROMPT.md
+*.log
+.DS_Store
+.env
+_to_delete/

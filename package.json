@@ -1,0 +1,71 @@
+{
+  "name": "vibeok",
+  "version": "0.1.0",
+  "description": "Test your web app like a real user, in plain English. Finds dead buttons, silent 500s, lost data and broken mobile layouts, and writes a fix prompt for Cursor, Claude Code or Lovable. CLI + MCP server.",
+  "keywords": [
+    "ai-testing",
+    "bolt",
+    "checkly-alternative",
+    "claude-code",
+    "codex",
+    "cursor",
+    "dead-buttons",
+    "e2e",
+    "e2e-testing",
+    "lovable",
+    "mcp",
+    "mcp-server",
+    "natural-language",
+    "playwright",
+    "qa",
+    "qa-agent",
+    "testing",
+    "vibe-coding"
+  ],
+  "homepage": "https://tryvibeok.site",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sfaeer697/vibeok.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sfaeer697/vibeok/issues"
+  },
+  "license": "MIT",
+  "author": "Muhammad Safeer Baig",
+  "type": "module",
+  "bin": {
+    "vibeok": "dist/cli.js"
+  },
+  "main": "dist/index.js",
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "typecheck": "tsc",
+    "demo": "node examples/broken-vibe-app/server.mjs",
+    "test": "npm run build && node --test test/scan.test.mjs test/auth.test.mjs test/journey.test.mjs test/mcp.test.mjs",
+    "prepublishOnly": "npm run typecheck && npm test"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "commander": "^15.1.0",
+    "picocolors": "^1.1.1",
+    "playwright-core": "^1.65.1",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "tsup": "^9.0.0",
+    "typescript": "^7.0.2"
+  }
+}
